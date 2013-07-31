@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+def get_current_issue
+  branch = `git rev-parse --abbrev-ref HEAD`
+  branch.match(/\d+/)[0]
+end
+
+issue = ARGV[0] || get_current_issue
+url = "http://redmine.ext.campanja.net/issues/#{issue}"
+`open #{url}`

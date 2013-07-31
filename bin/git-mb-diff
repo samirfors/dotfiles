@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+git df `git mb`..HEAD $@
