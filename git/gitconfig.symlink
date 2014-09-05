@@ -39,6 +39,8 @@
         who = "!git shortlog -s -- | sort -n -k1"
         aliases = "!git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'"
         swap = checkout "@{-1}"
+        wdiff = diff --color-words='[^[:space:],(){}]+'
+        wshow = show --color-words='[^[:space:],(){}]+'
 [color]
         ui = auto
         branch = auto
@@ -50,10 +52,15 @@
 [apply]
         whitespace = nowarn
 [mergetool]
-        keepBackup = false
+	keepBackup = false
 [difftool]
         prompt = false
 [help]
         autocorrect = 1
 [push]
 	default = current
+[merge]
+	tool = diffmerge
+[mergetool "diffmerge"]
+	cmd = diffmerge --merge\n--result=$MERGED $LOCAL $BASE $REMOTE
+	trustExitCode = true
