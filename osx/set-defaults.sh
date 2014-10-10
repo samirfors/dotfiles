@@ -46,3 +46,6 @@ defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
+
+# Install the Solarized Dark theme for iTerm
+open "${HOME}/init/Solarized Dark.itermcolors"
