@@ -121,9 +121,6 @@ export EDITOR='subl -w'
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-# Deployinator in PATH
-export PATH=${PATH}:/Users/samirfors/.deployinator/app/bin:node_modules/.bin
-
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # export PS1=' in \[\033[1;36m\]\W\[\033[0m\] on\033[31m\]$(__git_ps1)\[\033[00m\]\n> '
@@ -147,6 +144,3 @@ else \
 fi)'
 
 export CLICOLOR=1
-
-# database for python
-export DATABASE_URL=sqlite:////Users/samirfors/git/bp-planbokning/bp-planbokning-backend/db.sqlite
