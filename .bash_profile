@@ -107,6 +107,7 @@ git_prompt_info () {
 export PATH="/usr/local/bin:$PATH"
 export PATH="$PATH:$HOME/.dotfiles/bin"
 export PATH="$PATH:/usr/local/share/npm/bin"
+export PATH="$PATH:./node_modules/.bin"
 export ZSH=$HOME/.dotfiles
 ### export NODE_PATH="/usr/local/lib/node"
 export CURRENT_GIT=`git --version | cut -d' ' -f3`
