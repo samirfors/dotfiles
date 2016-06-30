@@ -41,6 +41,8 @@
         swap = checkout "@{-1}"
         wdiff = diff --color-words='[^[:space:],(){}]+'
         wshow = show --color-words='[^[:space:],(){}]+'
+        # Remove merged local branches
+        pruneall = fetch --prune && git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -d
 [color]
         ui = auto
         branch = auto
