@@ -82,6 +82,8 @@ start=" in "
 on=" on"
 sign="> "
 
+ssh-add -K ~/.ssh/id_rsa
+
 git_dirty() {
   st=$(/usr/bin/git status 2>/dev/null | tail -n 1)
   if [[ $st == "" ]]
@@ -145,3 +147,8 @@ else \
 fi)'
 
 export CLICOLOR=1
+
+# Setting PATH for Python 3.6
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
+export PATH
