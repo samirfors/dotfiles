@@ -1,5 +1,9 @@
 # holman does dotfiles
 
+## fish
+Install with installer from https://fishshell.com/
+Fix symlink for `config.fish`
+
 ## dotfiles
 
 Your dotfiles are how you personalize your system. These are mine. The very
