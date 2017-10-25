@@ -1,16 +1,17 @@
 ssh-add -K ~/.ssh/id_rsa
 
+set -gx PATH /Library/Frameworks/Python.framework/Versions/2.7/bin $PATH
+#set -gx PATH /Library/Frameworks/Python.framework/Versions/3.6/bin $PATH
 set -gx PATH $PATH $HOME/.dotfiles/bin
 set -gx PATH $PATH ./node_modules/.bin
-#set -gx PATH /Library/Frameworks/Python.framework/Versions/3.6/bin $PATH
 
 set -gx ANDROID_HOME /usr/local/opt/android-sdk
-set -gx theme_short_path yes
 
 # Added by n-installer
 set -gx N_PREFIX $HOME/n
 set -gx PATH $PATH $N_PREFIX/bin
 
+# Make prompt real nice
 function _git_branch_name
   echo (git symbolic-ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
 end
@@ -42,7 +43,7 @@ function fish_prompt
       set git_branch $red(_git_branch_name)
     end
 
-    set git_info "$blue at ($git_branch$blue)"
+    set git_info "$blue at $git_branch"
 
     set -l with_unpushed (_git_branch_name)
 
@@ -55,3 +56,6 @@ function fish_prompt
   echo -n -s \n$cwd $git_info
   echo -e \n$arrow $normal
 end
+
+# Run this command to get autocompletion for awscli
+complete --command aws --no-files --arguments '(begin; set --local --export COMP_SHELL fish; set --local --export COMP_LINE (commandline); aws_completer | sed \'s/ $//\'; end)'
