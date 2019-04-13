@@ -1,7 +1,5 @@
 ssh-add -K ~/.ssh/id_rsa
 
-set -g __fish_init_2_39_8                 \x1d
-set -g __fish_init_2_3_0                  \x1d
 set -g fish_color_autosuggestion          555\x1ebrblack
 set -g fish_color_cancel                  \x2dr
 set -g fish_color_command                 \x2d\x2dbold
