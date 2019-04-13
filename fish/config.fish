@@ -5,11 +5,19 @@ set -gx PATH /Library/Frameworks/Python.framework/Versions/2.7/bin $PATH
 set -gx PATH $PATH $HOME/.dotfiles/bin
 set -gx PATH $PATH ./node_modules/.bin
 
-set -gx ANDROID_HOME /usr/local/opt/android-sdk
+# set -gx ANDROID_HOME /usr/local/opt/android-sdk
+set -gx JAVA_HOME /Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home
+set -gx ANDROID_HOME ~/Library/Android/sdk
 
 # Added by n-installer
 set -gx N_PREFIX $HOME/n
 set -gx PATH $PATH $N_PREFIX/bin
+set -gx PATH $PATH $ANDROID_HOME/platform-tools
+set -gx PATH $PATH $ANDROID_HOME/tools/bin
+set -gx PATH $PATH $ANDROID_HOME/emulator
+set -gx PATH $PATH $ANDROID_HOME/tools
+
+alias android-studio="open -a /Applications/Android\ Studio.app/"
 
 # Make prompt real nice
 function _git_branch_name

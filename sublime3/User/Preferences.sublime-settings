@@ -1,7 +1,9 @@
 {
-	"font_size": 13.0,
+	"color_scheme": "Monokai.sublime-color-scheme",
+	"font_size": 11.0,
 	"ignored_packages":
 	[
+		"Highlight Dodgy Chars",
 		"Vintage"
 	],
 	"rulers":

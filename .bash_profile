@@ -117,7 +117,8 @@ export GIT_HOME=/usr/local/Cellar/git/$CURRENT_GIT
 source $GIT_HOME/etc/bash_completion.d/git-completion.bash
 source $GIT_HOME/etc/bash_completion.d/git-prompt.sh
 export NODE_PATH=/usr/local/lib/node_modules
-export ANDROID_HOME=/usr/local/opt/android-sdk
+# export ANDROID_HOME=/usr/local/opt/android-sdk
+export ANDROID_HOME=~/Library/Android/sdk
 # export PYTHONPATH=/usr/local/lib/python2.7/site-packages
 export EDITOR='subl -w'
 
